@@ -1,0 +1,181 @@
+/*
+*
+* @author Dimitri
+* @version 0.1
+*/
+
+/* -----------------layout----------------- */
+html, body, .capa { /*ocupando todo o espaço*/
+	height: 100%;
+}
+
+
+body {
+	background: url('violenceagainstwomen.jpg');
+	background-size: contain; 
+	background-attachment: fixed; /*background travado*/	
+	font-family: 'Helvetica' 'arial' 'serif';
+	overflow-x: hidden;
+}
+
+/* -- coluna com os filtros -- */
+.ferramenta {
+	background-color: rgba(255,255,255,0.8);
+	padding: 15px;
+}
+
+/* -- barra de navegação -- */
+.img-logo {
+	height: 40px;
+	width: 132px;
+	background: url('imagens/spotify.svg') no-repeat; /*imagem repete*/
+	display: block;
+	background-size: contain; /*define imagem de fundo*/
+	color: transparent;
+}
+
+nav.navbar-transparente{
+	padding: 15px 0px;
+	background: rgba(0,0,0,0.6);
+	border: none;
+
+}
+ /*Centralizando o logo do spotify*/
+.navbar-brand {
+	padding: 5px 15px;
+}
+
+
+.divisor {
+	width: 1px;
+	height: 16px;
+	background: white;
+	margin: 16px 10px;
+}
+
+/*links do menu*/
+.navbar-inverse .navbar-nav>li>a , footer .nav a{
+    color: white;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover , footer .nav a:hover{
+    color: #9bf0e1;
+    background: none;
+}
+
+/* -----------------imagem de capa-------- */
+.capa {
+	display: table;
+	width: 100%;
+}
+
+.texto-capa{
+	text-align: center;
+	color:	white;
+	display: table-cell;
+	vertical-align: middle;
+	transition: background 0.4s, color: 0.4s;
+}
+
+/* -----------------botões----------------- */
+
+.btn-custom { 
+	color: white;
+	border-radius: 500px; /*arredondamentos*/
+	-webkit-border-radius: 500px; /*arredondamentos*/
+	-moz-border-radius: 500px; /*arredondamentos*/
+	padding: 10px 35px;
+	margin: 0 15px;
+	text-transform: uppercase;
+	transition: background 0.4s, color 0.4s;
+}
+
+.btn-roxo {
+	background: #7c25f8;	
+}
+
+.btn-roxo:hover {
+	background-color: #6207e3;
+	color: white;
+}
+
+.btn-branco {
+	border: 2px solid white;
+}
+
+.btn-branco:hover {
+	background-color: white;
+	color: black;
+}
+
+/* -----------------Serviços--------------- */
+#servicos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.albuns {
+	padding: 10px 0 10px 0;
+}
+
+/* -----------------Recursos--------------- */
+#recursos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.rotacionar {
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	padding-left: 80px;
+}
+
+/*footer*/
+
+footer {
+	background: #000;
+	padding: 50px 0px 20px 0px;
+	position: relative;
+}
+
+.item-rede-social {
+	float: right;
+}
+
+/* -----------------Tipografia------------- */
+
+h1 {
+	font-size: 100px;
+	font-weight: 900;
+	letter-spacing: -0.05em;
+	margin-bottom: 50px;
+}
+
+h2 {
+	font-size: 50px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+h3 {
+	font-size: 35px;
+	font-weight: 700;
+	letter-spacing: -0.04em;
+}
+
+#servicos h2, #servicos h3 {
+	color: #7c25f8;
+}
+
+#recursos h3 {
+	color: #9bf0e1;
+}
+
+#rodape h4 {
+	color: #919496;
+	font-size: 12px;
+	text-transform: uppercase;
+}
+

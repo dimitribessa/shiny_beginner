@@ -1,0 +1,128 @@
+/*
+* layout app peoc (11-fev-2019)
+* @author Dimitri
+* @version 0.1
+*/
+/*ajeitar as cores das abas, que não estão seguindo as mesmas cores da navegação (29-nov-2018)*/
+
+/* -----------------layout----------------- */
+html, body, { /*ocupando todo o espaço*/
+	height: 100%;
+}
+
+
+body {
+	/*background-color: linear-gradient(50deg,#d9d9d9,#636363);  /*--backgrounds compostos--*/
+	/*background-attachment: fixed; /*background travado*/	
+	font-family: 'Helvetica' 'arial' 'serif';
+	overflow-x: hidden;
+}
+
+.container-fluid{background-color: #ffcccc} /*cor de fundo*/
+
+#proposta {
+	background: url('imagens/Icon2.png') center no-repeat;
+	background-attachment: fixed;
+	height: 100%;
+	}
+
+.imagem {
+	display: inline-block;
+	margin: auto;
+	text-align: center;
+}
+
+
+/* -- layout aba mapa -- */
+#mapa {
+	 position: fixed;
+ 	 top: 45px;
+  	left: 0;
+  	right: 0;
+  	bottom: 0;
+  	overflow: hidden;
+  	padding: 0;
+}
+
+
+/* -- coluna com os filtros -- */
+.ferramenta {
+	background-color: rgba(255,255,255,0.85);
+	padding: 15px;
+	display: inline-block;
+}
+
+/* -- barra de controle --*/
+#controls {
+  /* Appearance */
+  background-color: white;
+  padding: 0 20px 20px 20px;
+  cursor: move;
+  /* Fade out while not hovering */
+  opacity: 0.65;
+  zoom: 0.9;
+  transition: opacity 500ms 1s;
+}
+#controls:hover {
+  /* Fade in while hovering */
+  opacity: 0.95;
+  transition-delay: 0;
+}
+
+
+/* -- barra de navegação -- */
+.img-logo {
+	height: 40px;
+	width: 132px;
+	/*background: url('imagens/spotify.svg') no-repeat; /*imagem repete*/
+	display: block;
+	background-size: contain; /*define imagem de fundo*/
+	color: transparent;
+}
+
+nav.navbar, nav.navbar-default{
+	padding: 0px;
+	background: rgba(0,0,0,0.4);
+	border: none;
+
+}
+ /*Centralizando o logo do spotify*/
+.navbar-brand {
+	padding: 5px 15px;
+}
+
+
+
+/*editando a aba ativa (29-nov-2018)*/
+.navbar-nav li a:hover, .navbar-nav > .active > a {
+color: #fff !important;
+
+background:none !important;
+background-image: none !important;
+}
+
+
+/* -----------------Serviços--------------- */
+#servicos {
+	background: white;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.albuns {
+	padding: 10px 0 10px 0;
+}
+
+/* -----------------Recursos--------------- */
+#recursos {
+	padding-top: 20px;
+	padding-bottom: 20px;
+	color: white;
+}
+
+.rotacionar {
+	transform: rotate(30deg);
+	-webkit-transform: rotate(30deg);
+	padding-left: 80px;
+}
+

@@ -1,0 +1,23 @@
+/*layout shinyapp votação mdb*/
+/*---------------------------*/
+/*@author: Dimitri;-----------*/
+/*version: 0.1---------------*/
+
+h1 {
+	color: orange;
+	font-size: 20;
+	font-weight: 800;
+}
+/**/
+body { 
+	background: /*url('capa.png'),*/
+				linear-gradient(50deg,#ff4169,#7c26f8); /*--backgrounds compostos--*/
+	background-attachment: fixed; /*background travado*/	
+	font-family: 'Helvetica' 'arial' 'serif';
+	overflow-x: hidden;
+}
+
+
+
+
+
