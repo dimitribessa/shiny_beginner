@@ -17,3 +17,5 @@
  library('ggmap') # Para confecção de mapas
 
  load('data.RData')
+
+

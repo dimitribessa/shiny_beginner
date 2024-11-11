@@ -23,7 +23,8 @@
                                        
   #atribuindo o objeto mapa                    
    mapa <- leaflet() %>%
-    addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
+    #addProviderTiles("OpenStreetMap.BlackAndWhite") %>%
+    addTiles(urlTemplate = 'https://api.mapbox.com/styles/v1/mapbox/dark-v9/tiles/256/{z}/{x}/{y}?access_token=pk.eyJ1IjoiZGltaXRyaWJlc3NhIiwiYSI6ImNqOW82ZngxaTVhOW0zMm1xZGE2M2hidHoifQ.v16TlYEyqeTRXVsX-9AijQ', attribution = 'Maps by Secretaria de Estado do Planejamento') %>%
         setView(lat =  -14.235, lng = -51.9253, zoom = 4) %>%
         addPolylines(data = estadopoly, color = "#f5f5f5",
         weight = 2.5) 

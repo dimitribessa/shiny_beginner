@@ -8,16 +8,15 @@
  library('ggplot2')
  library('maps') #carregar mapas padrao
  library('maptools') #Para confec??o de mapas
- library('rgeos') #leitura de mapas
- library('rgdal') #leitra de mapas
+ #library('rgeos') #leitura de mapas
+ #library('rgdal') #leitra de mapas
 
  library('plotly')
 
  library('shiny')
  library('leaflet')
 
-# Any code in this file is guaranteed to be called before either
-# ui.R or server.R
+
 
  #lendo os dados
  load('dados.RData')
@@ -110,7 +109,7 @@
  }
  
  #adicionado em 18-jul-19 (11:12h)
- #!gráfico barra nvd3
+ #!grï¿½fico barra nvd3
  discreteChartOutput <- function(inputId, width="100%", height="400px") {
   style <- sprintf("width: %s; height: %s;",
     validateCssUnit(width), validateCssUnit(height))
@@ -131,7 +130,7 @@
   )
  }
  
- #!gráfico vertical barra nvd3
+ #!grï¿½fico vertical barra nvd3
  NVD3vbarchart <- function(inputId, width="100%", height="400px") {
   style <- sprintf("width: %s; height: %s;",
     validateCssUnit(width), validateCssUnit(height))

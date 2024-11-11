@@ -1,6 +1,6 @@
   ui <-  tags$html(
          tags$head(
-         tags$meta(charset="utf-8"),
+         tags$meta(charset="UTF-8"),
          tags$title("Violência contra Mulher"),
          tags$link(rel = "stylesheet", type = "text/css", href = "estilo.css"), # href="bootstrap.min.css")
          tags$link( href="bootstrap.min.css", rel="stylesheet")

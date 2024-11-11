@@ -16,3 +16,9 @@ library('leaflet')
  load('data.RData')
  source("multibarchart.R")
 
+Encoding(levels(all_data$RENDA)) <- 'latin1'
+Encoding(names(all_data)) <- 'UTF-8'
+Encoding(levels(all_data$IDADE)) <- 'latin1'
+Encoding(levels(all_data$RACACOR)) <- 'latin1'
+Encoding(levels(all_data$ESC)) <- 'latin1'
+

@@ -5,8 +5,8 @@ library('shinydashboard')
 
 library('dplyr')        #manipulacao de dados - tydiverse
 library('stringr')      #funcoes de string  - tydiverse
-library('rgeos') #leitura de mapas
-library('rgdal') #leitra de mapas
+#library('rgeos') #leitura de mapas
+#library('rgdal') #leitra de mapas
 library('RColorBrewer')
 library('raster')
 library('leaflet')

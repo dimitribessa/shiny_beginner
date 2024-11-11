@@ -5,8 +5,6 @@ server <- shinyServer(function(input, output, session) {
   #ui dinâmico
    output$ui <- renderUI({
 
-    # Depending on input$input_type, we'll generate a different
-    # UI component and send it to the client.
     switch(input$opcao,
            'idhm' = selectInput("varidhm", "Indicador:",choices = c(names(dadosidh)[3:8]), selected = names(dadosidh)[3]),
            'ivs'  = selectInput("varivs", "Indicador:",choices =  c(names(ivs)[3:22]), selected = names(ivs)[3]),
@@ -51,7 +49,7 @@ server <- shinyServer(function(input, output, session) {
  observeEvent(input$action,{
    teste <- dadomapa()
 
-    if(teste@data[,13] >= 1){bins <- unique(as.vector(ceiling(quantile(teste@data[,13], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1),na.rm = T))))}else{
+    if(teste@data[1,13] >= 1){bins <- unique(as.vector(ceiling(quantile(teste@data[,13], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1),na.rm = T))))}else{
        bins <- unique(as.vector(quantile(teste@data[,13], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1),na.rm = T)))}
     
    pal <- colorBin("YlOrRd", domain = teste@data[,13], bins = bins)

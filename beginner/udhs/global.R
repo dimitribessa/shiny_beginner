@@ -8,8 +8,8 @@
  library('ggplot2')
  library('maps') #carregar mapas padrao
  library('maptools') #Para confecção de mapas
- library('rgeos') #leitura de mapas
- library('rgdal') #leitra de mapas
+ #library('rgeos') #leitura de mapas
+ #library('rgdal') #leitra de mapas
 
  library('plotly')
 

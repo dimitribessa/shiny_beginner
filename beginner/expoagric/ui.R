@@ -11,6 +11,7 @@
      tags$body(         
   #abas para as diversas páginas   #
   navbarPage(tags$span(class = 'img-logo'),
+  id = 'navbar',
   #tags$img(src = 'epagri_logo.png'),
 
   tabPanel('Exportações Agropecuária',
@@ -32,6 +33,7 @@
                   ) #fluidRow
         ), #section
     hr(),      
+     
      tags$div(class = 'container',
   leafletOutput("mapa",width="100%",height="450px"),
    hr(),

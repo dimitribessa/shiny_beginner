@@ -22,8 +22,9 @@
   #  output$value <- renderPrint({ input$map_shape_click })
         
  observe({
+   req(input$color)
  #  bins <- seq(min(municipiopoly@data[,input$color]),max(municipiopoly@data[,input$color]),length  =8)
-    if(municipiopoly@data[,input$color] >= 1){bins <- unique(as.vector(ceiling(quantile(municipiopoly@data[,input$color], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1)))))}else{
+    if(municipiopoly@data[1,input$color] >= 1){bins <- unique(as.vector(ceiling(quantile(municipiopoly@data[,input$color], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1)))))}else{
        bins <- unique(as.vector(quantile(municipiopoly@data[,input$color], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1))))}
    pal <- colorBin("YlOrRd", domain = municipiopoly@data[,input$color], bins = bins)
    colorData <- pal(municipiopoly@data[,input$color])

@@ -50,14 +50,9 @@ ui <-  tags$html(
                    br()
           ), #tabPanel
           
-     tabPanel('Detalhes da proposta.',
+     tabPanel('Detalhes.',
   tags$div(id = 'proposta', class = 'container',
-   tags$div(class = 'ferramenta',
-    h1('Objetivo:'),
-    h3('Levantar informações para prospecção de mercado, com intuito de identificar potenciais clientes da V8 Brasil.'),
-    p('As ferramentas disponibilizadas são protótipos, que serão ajustados de acordo com as necessidades da V8 Brasil.')
-    ),#ferramenta
-    hr(),
+   
    fluidRow(
      column(6,
            tags$div(class = 'ferramenta',

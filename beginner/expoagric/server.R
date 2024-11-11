@@ -177,7 +177,7 @@ server <- shinyServer(function(input, output, session) {
  #-----------------------------------------------------------------------------#
  #---------------------pib agronegócio-----------------------------------------#
  #-----------------------------------------------------------------------------#
-  output$map <- renderLeaflet({mapaii})
+   output$map <- renderLeaflet({mapaii})
   
   pib <- reactive({dado <- data_pib[data_pib[,1] == input$ano,c('cod_mun',input$pib,'va_total')]
                    if(input$checkbox == TRUE){dado[,2] <- round(dado[,2]/dado[,3],4)}
@@ -185,9 +185,10 @@ server <- shinyServer(function(input, output, session) {
           })#reactive
     
   observe({
+    req(input$navbar == 'Produção Agronegócio')
   mapa_pib <- sp::merge(municipiopoly, pib(), by.x = 'CD_GEOCMU', by.y = 'cod_mun')
  #  bins <- seq(min(mapa_pib@data[,input$color]),max(mapa_pib@data[,input$color]),length  =8)
-    if(mapa_pib@data[,input$pib] >= 1){bins <- unique(as.vector(ceiling(quantile(mapa_pib@data[,input$pib], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1), na.rm = T))))}else{
+    if(mapa_pib@data[1,input$pib] >= 1){bins <- unique(as.vector(ceiling(quantile(mapa_pib@data[,input$pib], probs = c(0,0.30,0.50,0.7,0.85,0.95,0.98,1), na.rm = T))))}else{
        bins <- unique(as.vector(quantile(mapa_pib@data[,input$pib], probs = c(0,0.20,0.50,0.7,0.85,1), na.rm = T)))}
    pal <- colorBin("YlOrRd", domain = mapa_pib@data[,input$pib], bins = bins)
    colorData <- pal(mapa_pib@data[,input$pib])
@@ -203,7 +204,7 @@ server <- shinyServer(function(input, output, session) {
     weight = 1.5,highlight = highlightOptions(
     weight = 5,
     color = "#666",
-    dashArray = "",
+    dashArray = NULL,
     fillOpacity = 0.7,
     bringToFront = TRUE),
   label = labells,
@@ -212,7 +213,7 @@ server <- shinyServer(function(input, output, session) {
     textsize = "12px",
     maxWidth = '200px',
     direction = "auto")) %>% 
-    addLegend(pal = pal, values = colorData, opacity = 0.7, title = paste('VA', input$pib),
+    leaflet::addLegend(pal = pal, values = colorData, opacity = 0.7, title = paste('VA', input$pib),
   position = "bottomright",
         layerId="colorLegend")# %>%
      #addMarkers(data = dado, lng = ~long, lat = ~lat )     
