@@ -68,7 +68,7 @@ Here is the list of all project applications available here and hosted on my per
 - [Consumption and Wages](http://142.93.67.223/shiny/pof_rais);
 - [Historical temperatures in Santa Catarina state](http://142.93.67.223/shiny/mediatemp1);
 - [COVID-19 in Santa Catarina state](http://142.93.67.223/shiny/covidSC/);
-- [Climate projections](http://142.93.67.223/shiny/mud_climatica/);
+- [Climate projections](http://142.93.67.223/shiny/mud_clima/);
 
 
 
